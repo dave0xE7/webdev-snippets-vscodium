@@ -1,0 +1,55 @@
+{
+  "name": "webdev-snippets-vscodium",
+  "version": "1.0.0",
+  "description": " web-technology code snippets extension for vscodium ",
+  "author": "dave0xE7",
+  "displayName": "Webdev-technology Snippets for vscodium",
+  "publisher": "dave0xE7",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.9.1"
+  },
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "galleryBanner": {
+    "color": "#1E81C1",
+    "theme": "light"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/html-snippets.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/js-snippets.json"
+      }
+    ]
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dave0xE7/webdev-snippets-vscodium/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dave0xE7/webdev-snippets-vscodium.git"
+  },
+  "homepage": "https://github.com/dave0xE7/webdev-snippets-vscodium/blob/master/README.md",
+  "devDependencies": {
+    "esbuild": "^0.20.0",
+    "ts-loader": "^9.5.1",
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "vscode-test"
+	}
+}
